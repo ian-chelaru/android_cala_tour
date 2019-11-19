@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CalaTour</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sing in</string>
+
+    <string name="add_offer_title">Add offer</string>
+    <string name="remove_offer_title">Remove offer</string>
+</resources>
