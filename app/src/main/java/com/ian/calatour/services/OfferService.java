@@ -8,6 +8,13 @@ import java.util.List;
 
 public class OfferService
 {
+    private static int id = 3;
+    private static final String DEFAULT_NAME = "Title added";
+    private static final String DEFAULT_DESCRIPTION = "Description for the added offer.";
+    private static final int DEFAULT_PRICE = 0;
+    private static final String DEFAULT_CURRENCY = "EUR";
+    private static final int DEFAULT_IMAGE = R.drawable.offer_1;
+
     public static List<Offer> getOffers()
     {
         List<Offer> offers = new ArrayList<>();
@@ -41,5 +48,18 @@ public class OfferService
         offers.add(thailandOffer);
 
         return offers;
+    }
+
+    public static Offer createOffer()
+    {
+        Offer offer = new Offer();
+        id += 1;
+        offer.setId(id);
+        offer.setName(DEFAULT_NAME);
+        offer.setDescription(DEFAULT_DESCRIPTION);
+        offer.setPrice(DEFAULT_PRICE);
+        offer.setCurrency(DEFAULT_CURRENCY);
+        offer.setImage(DEFAULT_IMAGE);
+        return offer;
     }
 }

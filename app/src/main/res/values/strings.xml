@@ -6,4 +6,17 @@
 
     <string name="add_offer_title">Add offer</string>
     <string name="remove_offer_title">Remove offer</string>
+
+    <string name="log_out_title">Confirmation</string>
+    <string name="log_out_message">Please confirm log out intention ?</string>
+    <string name="log_out_positive">Confirm</string>
+    <string name="log_out_negative">Cancel</string>
+
+    <string name="offers_list">Offers list</string>
+
+    <string name="sign_out">SIGN OUT</string>
+    <string name="reset_list">Reset list</string>
+    <string name="clear_favorites">Clear favorites</string>
+
+    <string name="reset_toast">List has been reset!</string>
 </resources>
