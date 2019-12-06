@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
@@ -22,6 +23,9 @@ import com.ian.calatour.services.OfferService;
 
 public class OfferListActivity extends AppCompatActivity implements DialogInterface.OnClickListener
 {
+    private static final int VIEW_OFFER_REQUEST = 1;
+    private static int times = 0;
+
     private OffersAdapter offersAdapter;
 
     @Override
@@ -35,6 +39,14 @@ public class OfferListActivity extends AppCompatActivity implements DialogInterf
         ListView listViewReference = findViewById(R.id.offers_list_view);
         offersAdapter = new OffersAdapter(this, OfferService.getOffers());
         listViewReference.setAdapter(offersAdapter);
+
+        listViewReference.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent = new Intent(this, OfferViewActivity.class);
+            intent.putExtra("offer", (Offer) listViewReference.getItemAtPosition(position));
+            times += 1;
+            intent.putExtra("times", times);
+            startActivityForResult(intent, VIEW_OFFER_REQUEST);
+        });
 
         registerForContextMenu(listViewReference);
     }
@@ -68,6 +80,10 @@ public class OfferListActivity extends AppCompatActivity implements DialogInterf
             {
                 break;
             }
+            case R.id.chat_with_us:
+                Intent intent = new Intent(this, ChatActivity.class);
+                startActivity(intent);
+                break;
         }
 
         return super.onOptionsItemSelected(item);

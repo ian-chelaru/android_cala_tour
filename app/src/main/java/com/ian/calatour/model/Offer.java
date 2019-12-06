@@ -1,6 +1,8 @@
 package com.ian.calatour.model;
 
-public class Offer
+import java.io.Serializable;
+
+public class Offer implements Serializable
 {
     private int id;
     private String name;
@@ -8,12 +10,13 @@ public class Offer
     private int price;
     private String currency;
     private int image;
+    private boolean favorite;
 
     public Offer()
     {
     }
 
-    public Offer(int id, String name, String description, int price, String currency, int image)
+    public Offer(int id, String name, String description, int price, String currency, int image, boolean favorite)
     {
         this.id = id;
         this.name = name;
@@ -21,6 +24,7 @@ public class Offer
         this.price = price;
         this.currency = currency;
         this.image = image;
+        this.favorite = favorite;
     }
 
     public int getId()
@@ -81,5 +85,15 @@ public class Offer
     public void setImage(int image)
     {
         this.image = image;
+    }
+
+    public boolean isFavorite()
+    {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite)
+    {
+        this.favorite = favorite;
     }
 }

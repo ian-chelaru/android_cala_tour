@@ -17,6 +17,11 @@
     <string name="sign_out">SIGN OUT</string>
     <string name="reset_list">Reset list</string>
     <string name="clear_favorites">Clear favorites</string>
+    <string name="chat_with_us">Chat with us!</string>
 
     <string name="reset_toast">List has been reset!</string>
+
+    <string name="send">Send</string>
+    <string name="my_username">Username:</string>
+    <string name="ian">Ian</string>
 </resources>

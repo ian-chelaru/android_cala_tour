@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OfferViewActivity"></activity>
+        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".OfferViewActivity" />
         <activity android:name=".OfferListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.ian.calatour.model.User;
+
 public class MainActivity extends AppCompatActivity
 {
 
@@ -72,6 +74,10 @@ public class MainActivity extends AppCompatActivity
                 credentialsError.setText("Login successful!");
                 credentialsError.setTextColor(ResourcesCompat.getColor(getResources(), R.color.green, null));
 //                credentialsError.setTextColor(Color.GREEN);
+
+                User user = User.getInstance();
+                user.setUsername(username);
+                user.setPassword(password);
 
                 Intent intent = new Intent(this, OfferListActivity.class);
                 startActivity(intent);
