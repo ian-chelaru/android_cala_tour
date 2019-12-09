@@ -8,13 +8,13 @@ public class ChatMessage
     private String sender;
     private int starImage;
     private String content;
-    private Date date;
+    private String date;
 
     public ChatMessage()
     {
     }
 
-    public ChatMessage(int id, String sender, int starImage, String content, Date date)
+    public ChatMessage(int id, String sender, int starImage, String content, String date)
     {
         this.id = id;
         this.sender = sender;
@@ -63,12 +63,12 @@ public class ChatMessage
         this.content = content;
     }
 
-    public Date getDate()
+    public String getDate()
     {
         return date;
     }
 
-    public void setDate(Date date)
+    public void setDate(String date)
     {
         this.date = date;
     }

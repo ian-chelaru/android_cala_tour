@@ -19,7 +19,7 @@ public class ChatMessageService
         chatMessage.setSender("Computer");
         chatMessage.setStarImage(R.drawable.star);
         chatMessage.setContent("Hi! How can I help you?");
-        chatMessage.setDate(new Date());
+//        chatMessage.setDate(new Date());
 
         chatMessages.add(chatMessage);
 

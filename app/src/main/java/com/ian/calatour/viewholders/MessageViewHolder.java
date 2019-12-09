@@ -33,7 +33,7 @@ public class MessageViewHolder extends RecyclerView.ViewHolder
         senderTextView.setText(chatMessage.getSender());
         starImageView.setImageResource(chatMessage.getStarImage());
         contentTextView.setText(chatMessage.getContent());
-        dateTextView.setText(chatMessage.getDate().toString());
+        dateTextView.setText(chatMessage.getDate());
 
         itemView.setOnClickListener(v -> {
             starImageView.setVisibility(View.VISIBLE);
